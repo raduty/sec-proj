@@ -1,10 +1,7 @@
 node { 
     stage('Build') {
         steps {
-            CD > tmpFile
-            SET /P myvar= < tmpFile
-            DEL tmpFile
-            echo 'Hello World ' %myvar%
+            println('Hello World');
         }
     }
     stage('Test') {
