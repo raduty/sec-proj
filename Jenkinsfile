@@ -1,12 +1,12 @@
 node { 
     stage('Build') {
-        println('Hello World');
+        checkout
     }
     stage('Test') {
-        echo 'This is another stage'
+        println('Hello World');
     }
     stage('Deploy') {
-        echo 'This is another stage'
+        println('This is another stage');
     }
 }
 echo 
