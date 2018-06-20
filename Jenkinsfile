@@ -1,6 +1,6 @@
 node { 
     stage('Build') {
-        checkout
+        checkout scm
     }
     stage('Test') {
         println('Hello World');
