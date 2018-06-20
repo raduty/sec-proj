@@ -1,8 +1,21 @@
 node { 
-    stage('Stage 1') {
-        echo 'Hello World' 
+    stage('Build') {
+        steps {
+            CD > tmpFile
+            SET /P myvar= < tmpFile
+            DEL tmpFile
+            echo 'Hello World ' %myvar%
+        }
     }
-    stage('Stage 2') {
-        echo 'This is another stage'
+    stage('Test') {
+        steps {
+            echo 'This is another stage'
+        }
+    }
+    stage('Deploy') {
+        steps {
+            echo 'This is another stage'
+        }
     }
 }
+echo 
