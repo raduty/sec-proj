@@ -9,4 +9,3 @@ node {
         println('This is another stage');
     }
 }
-echo 
