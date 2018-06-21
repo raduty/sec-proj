@@ -3,7 +3,7 @@ node {
         checkout scm
     }
     stage('Test') {
-        println('Hello World');
+        bat 'start cmd.exe /c mybat.bat'
     }
     stage('Deploy') {
         println('This is another stage');
