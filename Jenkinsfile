@@ -6,7 +6,7 @@ node {
     stage('Test') {
         // set some Unit tests to be executed
         
-        // execute code securty checks
+        // execute code securty checks - SAST
         // OWASP SonarQube Project
         // OWASP Orizon - Java
         // OWASP LAPSE - Java EE
@@ -20,6 +20,5 @@ node {
     stage('Deploy') {
         // Deploy app and run DAST tools
         bat 'call test.bat'
-       // bat 'call stop.bat'
     }
 }
